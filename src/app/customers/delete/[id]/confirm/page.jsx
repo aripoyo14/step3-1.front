@@ -12,7 +12,7 @@ export default function ConfirmPageWrapper() {
   );
 }
 
-export default function ConfirmPage(props) {
+function ConfirmPage(props) {
   const customer_id = useSearchParams().get("customer_id");
 
   return (

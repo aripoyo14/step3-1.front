@@ -14,7 +14,7 @@ export default function ConfirmPageWrapper() {
   );
 }
 
-export default function ConfirmPage(props) {
+function ConfirmPage(props) {
   const params = use(props.params);
   const router = useRouter();
   const id = params.id;
