@@ -1,6 +1,16 @@
 "use client";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import { Suspense } from "react"
+
+// メインコンポーネントをSuspenseでラップ
+export default function ConfirmPageWrapper() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ConfirmPage />
+    </Suspense>
+  );
+}
 
 export default function ConfirmPage(props) {
   const customer_id = useSearchParams().get("customer_id");
